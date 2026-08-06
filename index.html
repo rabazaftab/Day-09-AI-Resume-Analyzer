@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Resume Analyzer</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <header class="header">
+
+        <div class="logo">
+            📄
+        </div>
+
+        <div>
+
+            <h1>
+                AI Resume Analyzer
+            </h1>
+
+            <p>
+                Analyze your resume against any job description
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main class="card">
+
+
+        <div class="input-grid">
+
+
+            <section class="input-box">
+
+                <div class="section-title">
+
+                    <span>
+                        Your Resume
+                    </span>
+
+                    <span id="resumeCount">
+                        0 / 10000
+                    </span>
+
+                </div>
+
+
+                <textarea
+                    id="resume"
+                    maxlength="10000"
+                    placeholder="Paste your resume here..."
+                ></textarea>
+
+            </section>
+
+
+            <section class="input-box">
+
+                <div class="section-title">
+
+                    <span>
+                        Job Description
+                    </span>
+
+                    <span id="jobCount">
+                        0 / 10000
+                    </span>
+
+                </div>
+
+
+                <textarea
+                    id="jobDescription"
+                    maxlength="10000"
+                    placeholder="Paste the job description here..."
+                ></textarea>
+
+            </section>
+
+
+        </div>
+
+
+        <button
+            id="analyzeButton"
+            class="analyze-button"
+            onclick="analyzeResume()"
+        >
+
+            Analyze Resume
+
+        </button>
+
+
+        <section
+            id="results"
+            class="results hidden"
+        >
+
+
+            <div class="score-card">
+
+                <div
+                    id="score"
+                    class="score"
+                >
+                    0%
+                </div>
+
+                <div>
+
+                    <h2>
+                        Resume Match Score
+                    </h2>
+
+                    <p id="summary">
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-grid">
+
+
+                <div class="result-box">
+
+                    <h3>
+                        ✅ Strengths
+                    </h3>
+
+                    <ul id="strengths">
+                    </ul>
+
+                </div>
+
+
+                <div class="result-box">
+
+                    <h3>
+                        ⚠️ Missing Skills
+                    </h3>
+
+                    <ul id="missingSkills">
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="result-box">
+
+                <h3>
+                    💡 Suggestions
+                </h3>
+
+                <ul id="suggestions">
+                </ul>
+
+            </div>
+
+
+        </section>
+
+
+        <div
+            id="error"
+            class="error"
+        ></div>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Powered by OpenRouter AI
+        </p>
+
+    </footer>
+
+
+</div>
+
+
+<script
+    src="/static/script.js"
+></script>
+
+
+</body>
+
+</html>
